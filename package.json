@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "opusscript": "^0.0.8",
+    "ytdl-core": "^4.5.0"
+  }
 }

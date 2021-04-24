@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const { LOGCHANNEL } = require('../../config');
 
 module.exports = (client, member) => {
 

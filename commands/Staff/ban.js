@@ -6,8 +6,8 @@ module.exports.run = async (client, message, args) => {
     const user = message.mentions.members.first()
     const reason = (args.splice(1).join(' ') || 'Raison non spécifié par le modérateur');
       
-    await user.send().then((channel) => {
-      return channel.send(
+    try {
+      await user.send(
         new MessageEmbed()
           .setColor("#dc143c")
           .setTitle("**__Sanction__**")
@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
           )
           .setTimestamp()
       )
-    }).catch()
+    } catch (err) {}
       
     await user.ban({ days: 7, reason: `${reason}` })
       
