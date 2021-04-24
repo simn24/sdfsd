@@ -1,6 +1,6 @@
 exports.TOKEN = 'ODM0NzE5NjA4OTExOTUzOTYw.YIE_Nw.VN9bbVV99_ik7E0nFkt4a5Clagc'
 exports.PREFIX= 's!'
-
+exports.SERVEUR= 'Partie Communiste Neopolis !'
 
 
 // Channel des join message \\
