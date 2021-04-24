@@ -1,6 +1,6 @@
-const { MessageEmbed } = require("discord.js")
+const { GuildMember, MessageEmbed } = require('discord.js');
 
-module.exports = async function run(message, args) {
+module.exports.run = async (client, message, args) => {
 
   message.channel.bulkDelete(1, true)   
     const user = message.mentions.members.first()
