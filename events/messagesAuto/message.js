@@ -8,7 +8,7 @@ module.exports = (client, message) => {
 if (message.content === 'Salut' || message.content === 'Bonjour' && message.author.client) return message.channel.send('yo');
 
 // stop ping pd \\ 
-if message.author.bot return
+if (message.author.bot) return
 if (message.content === "Qui joue ?" && message.author.client) return message.reply('personne enfent de satan')
 if (message.content === "Voc ?" && message.author.client) return message.reply('ok j\'arrive')
 if (message.content === "Qui pour apex ?" && message.author.client) return message.reply('T tro nul sorry')
