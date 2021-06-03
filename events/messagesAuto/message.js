@@ -12,7 +12,7 @@ if message.author.bot return
 if (message.content === "Qui joue ?" && message.author.client) return message.reply('personne enfent de satan')
 if (message.content === "Voc ?" && message.author.client) return message.reply('ok j\'arrive')
 if (message.content === "Qui pour apex ?" && message.author.client) return message.reply('T tro nul sorry')
-if (message.content === "Oui" && message.author.client) return message.reply('Non')
+if (message.content === "ok" && message.author.client) return message.reply('Non')
 if (message.content === "Non" && message.author.client) return message.reply('Oui')
 if (message.content === "tg" && message.author.client) return message.reply('reverse')
 }
