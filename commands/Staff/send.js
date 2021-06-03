@@ -1,7 +1,6 @@
 module.exports.run = (client, message, args) => {
 const { MessageEmbed } = require("discord.js");
 
-module.exports = (client, member) => {
 
   const embed = new MessageEmbed()
     .setAuthor("Par simn bg tu crois c qui qui l'a fait ! ")
