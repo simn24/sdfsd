@@ -4,7 +4,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = (client, member) => {
 
   const embed = new MessageEmbed()
-    .setAuthor(`${member.displayName} (${member.id})`, member.user.displayAvatarURL())
+    .setAuthor("Par simn bg tu crois c qui qui l'a fait ! ")
     .setColor("#35f092") 
     .setDescription(`Bonjour mes ptites pute ! `)
     .setTimestamp()
