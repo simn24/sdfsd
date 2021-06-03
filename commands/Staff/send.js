@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 
 
   const embed = new MessageEmbed()
-    .setAuthor("Par simn bg tu crois c qui qui l'a fait ! ")
+    .setAuthor("TEST")
     .setColor("#35f092") 
     .setDescription(`Bonjour mes ptites pute ! `)
     .setTimestamp()
