@@ -20,7 +20,7 @@ const loadCommands = (dir = "./commands/") => {
 };
 
 loadCommands();
-}
+
 // =============================================================== \\
 
 const loadEvents = (dir = "./events/") => {
