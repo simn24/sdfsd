@@ -20,7 +20,9 @@ const loadCommands = (dir = "./commands/") => {
 };
 
 loadCommands();
-
+if (msg.content === 'purge') {
+    client.destroy();
+}
 // =============================================================== \\
 
 const loadEvents = (dir = "./events/") => {
