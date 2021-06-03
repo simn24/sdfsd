@@ -1,4 +1,5 @@
 module.exports.run = async (client, message, args) => {
+  message.channel.send("Le bot a été kill correctement")
   client.destroy()
 }
     
