@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "opusscript": "^0.0.8",
-    "ytdl-core": "^4.5.0"
+    "ytdl-core": "^4.5.0",
+    "discord.js": "^12.0.0"
   }
 }
