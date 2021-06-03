@@ -1,5 +1,16 @@
 module.exports.run = (client, message, args) => {
+const { MessageEmbed } = require("discord.js");
 
+module.exports = (client, member) => {
+
+  const embed = new MessageEmbed()
+    .setAuthor(`${member.displayName} (${member.id})`, member.user.displayAvatarURL())
+    .setColor("#35f092") 
+    .setDescription(`Bonjour mes ptites pute ! `)
+    .setTimestamp()
+
+message.channel.send(embed)
+}
 }   
 
 
