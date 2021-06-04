@@ -24,5 +24,4 @@ module.exports.run = (client, message, args) => {
       usage: '', // Utilisation de la commande {Exemple : si la commandes est s!ban <@pseudo> mettre : <@pseudo>}
       isUserAdmin: false, // Vérifie si l'utilisateur a visé a les permissions
       permissions: false, // Vérifie si l'utilisateur a besoin des permissions pour utiliser la commande
-      args: false // Vérifie si la commande a besoin d'arguments
     }
