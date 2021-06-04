@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = (client, message, args) => {
                         
-message.reply("Le bot a été arreter correctement")
-client.destroy();
+process.exit();
+
 }
 module.exports.help = {
                         name: "kill",
