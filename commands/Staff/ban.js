@@ -1,5 +1,5 @@
 const { GuildMember, MessageEmbed } = require('discord.js');
-
+const { LOGCHANNEL } = require('../../config')
 module.exports.run = async (client, message, args) => {
 
   message.channel.bulkDelete(1, true)   
@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
       message.channel.send(banLogEmbed)
-    
+      client.channels.cache.get(`${LOGCHANNEL}`).send(banLogEmbed)
 }
     
 module.exports.help = {

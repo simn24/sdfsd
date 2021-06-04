@@ -1,6 +1,6 @@
 module.exports.run = (client, message, args) => {
 const { MessageEmbed } = require("discord.js");
-
+const { LOGCHANNEL } = require('../../config')
 
   const embed = new MessageEmbed()
     .setAuthor("TEST")
@@ -9,6 +9,7 @@ const { MessageEmbed } = require("discord.js");
     .setTimestamp()
 
 message.channel.send(embed)
+client.channels.cache.get(`${LOGCHANNEL}`).send(embed)
 }
    
 
