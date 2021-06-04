@@ -1,11 +1,11 @@
 module.exports.run = (client, message, args) => {
 const { MessageEmbed } = require("discord.js");
-const { LOGCHANNEL } = require('../../config')
+const { LOGCHANNEL } = require('./config')
 
   const embed = new MessageEmbed()
     .setAuthor("TEST")
     .setColor("#35f092") 
-    .setDescription(`Bonjour mes ptites pute ! `)
+    .setDescription(`test `)
     .setTimestamp()
 
 message.channel.send(embed)
