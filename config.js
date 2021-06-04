@@ -4,4 +4,4 @@ exports.SERVEUR= '[BK] bucks'
 
 
 // Channel des join message \\
-exports.LOGCHANNEL= '<>'
+exports.LOGCHANNEL= '<784443819634065429>'
