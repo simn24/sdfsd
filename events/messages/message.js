@@ -20,7 +20,7 @@ module.exports = (client, message) => {
     return message.reply(`${noArgsReply}`)
   }
 
-  if (!command.help.isUserAdmin) {
+  if (command.help.isUserAdmin) {
     const isUserAdminVerif = message.mentions.members.first();
     if (!isUserAdminVerif) return message.reply(`Personne introuvable`)
 
@@ -51,16 +51,6 @@ module.exports = (client, message) => {
   
 }
 
-// Ping text !-------------------- \\
-
-//module.exports = (client, message) => {
-
-  //if (message.content === 'ping') return message.channel.send('Pong !');
-
-// Salut text !------------------ \\
-
-//if (message.content === 'Salut' || message.content === 'Bonjour' && message.author.client) return message.channel.send('yo');
-//}
 
 
 
