@@ -4,4 +4,4 @@ exports.SERVEUR= 'Partie Communiste Neopolis !'
 
 
 // Channel des join message \\
-exports.LOGCHANNEL= '<828945726099685384>'
+exports.LOGCHANNEL= '<850327565797556244>'
