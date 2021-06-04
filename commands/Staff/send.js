@@ -3,13 +3,12 @@ const { MessageEmbed } = require("discord.js");
 const { LOGCHANNEL } = require('../../config')
 
   const embed = new MessageEmbed()
-    .setAuthor("Patch 1.0.1")
+    .setAuthor("Patch 2.0.0")
     .setColor("#35f092") 
-    .setDescription(`Ajout de la commande s!mute 60s variable disponible m: minute h: heure`)
+    .setDescription(`Correction de bug majeur et passage du bot en V2.0`)
     .setTimestamp()
 
-message.channel.send(embed)
-client.channels.cache.get(`${LOGCHANNEL}`).send(embed)
+message.channel.send(embed);
 }
    
 
