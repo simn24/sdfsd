@@ -16,6 +16,7 @@ if (message.content === "Non" && message.author.client) return message.reply('Ou
 if (message.content === "tg" && message.author.client) return message.reply('reverse')
 
 if (message.content === 's!purge') {
+  await
     message.channel.send("Le bot a bien été arreter bonne jouréne ! ")
     client.destroy();
 }
