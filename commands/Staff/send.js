@@ -7,9 +7,9 @@ const { LOGCHANNEL } = require('../../config')
     .setColor("#35f092") 
     .setDescription(`Bonjour mes ptites pute ! `)
     .setTimestamp()
-
-message.channel.send(embed)
 client.channels.cache.get(`${LOGCHANNEL}`).send(embed)
+message.channel.send(embed)
+
 }
    
 
