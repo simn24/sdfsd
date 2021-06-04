@@ -20,7 +20,7 @@ module.exports = (client, message) => {
     return message.reply(`${noArgsReply}`)
   }
 
-  if (command.help.isUserAdmin) {
+  if (!command.help.isUserAdmin) {
     const isUserAdminVerif = message.mentions.members.first();
     if (!isUserAdminVerif) return message.reply(`Personne introuvable`)
 
