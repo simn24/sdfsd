@@ -1,14 +1,45 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const { Client, Collection } = require('discord.js');
+const { TOKEN, LOGCHANNEL } = require('./config');
+const { readdirSync } = require("fs");
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+const client = new Client();
+["commands", "cooldowns"].forEach(x => client[x] = new Collection());
 
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-});
+// =============================================================== \\
 
-client.login(PROCESS.env.TOKEN);
+const loadCommands = (dir = "./commands/") => {
+  readdirSync(dir).forEach(dirs => {
+    const commands = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"));
+
+    for (const file of commands) {
+      const getFileName = require(`${dir}/${dirs}/${file}`);
+      client.commands.set(getFileName.help.name, getFileName);
+      console.log(`COMMAND LOG : **${getFileName.help.name}** was enabled`);
+    };
+  });
+};
+
+loadCommands();
+
+// =============================================================== \\
+
+const loadEvents = (dir = "./events/") => {
+    readdirSync(dir).forEach(dirs => {
+    const events = readdirSync(`${dir}/${dirs}/`).filter(files => files.endsWith(".js"));
+
+    for (const event of events) {
+      const evt = require(`${dir}/${dirs}/${event}`);
+      const evtName = event.split(".")[0];
+      client.on(evtName, evt.bind(null, client));
+      console.log(`EVENT LOG : **${evtName}** was enabled`)
+    };
+  });
+};
+
+loadEvents();
+
+// =============================================================== \\
+
+client.login(process.env.TOKEN)
+
+console.log(`${LOGCHANNEL}`)
