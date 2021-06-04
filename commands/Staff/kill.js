@@ -12,7 +12,7 @@ module.exports.help = {
                         description: "kill le bot",
                         cooldown: 5,
                         usage: "",
-                        isUserAdmin: true,
+                        isUserAdmin: false,
                         permissions: true,
                         args: false,
                       }
