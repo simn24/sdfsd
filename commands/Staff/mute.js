@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
                         let muteTime = (args[1] || '60s');
 
                         if (!muteRole) {
-                                                muteRole = await message.guild.roles.create()({
+                                                muteRole = await message.guild.roles.create({
                                                                         data: {
                                                                                                 name: 'muted',
                                                                                                 color: '#000',
