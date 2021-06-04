@@ -1,13 +1,13 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, User } = require("discord.js");
 module.exports.run = (client, message, args) => {
   
-  const embed = new MessageEmbed() 
+  const UserEmbed = new MessageEmbed() 
   .setColor("#606060")
   .setTitle(`Tu es l'utilisateur ${message.author.tag}`)
   .setAuthor("simn24 | Bot")
   .setFooter("simn24 | Bot, pour vous servir")
   .setTimestamp()
-  message.channel.send(embed);
+  message.channel.send(UserEmbed);
 
 
 }
