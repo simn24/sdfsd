@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-async                        
+                        
 await message.channel.send("Le bot a été arreter correctement")
 client.destroy();
 }
 module.exports.help = {
-                        name: "killl",
+                        name: "kill",
                         aliases: ["kille", "killed"],
                         category: "Staff",
                         description: "kill le bot",
