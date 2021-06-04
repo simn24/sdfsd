@@ -3,9 +3,9 @@ const { MessageEmbed } = require("discord.js");
 const { LOGCHANNEL } = require('../../config')
 
   const embed = new MessageEmbed()
-    .setAuthor("TEST")
+    .setAuthor("Patch 1.0.1")
     .setColor("#35f092") 
-    .setDescription(`test `)
+    .setDescription(`Ajout de la commande s!mute 60s variable disponible m: minute h: heure`)
     .setTimestamp()
 
 message.channel.send(embed)
