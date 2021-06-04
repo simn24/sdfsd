@@ -1,5 +1,5 @@
 const { Client, Collection } = require('discord.js');
-const { TOKEN } = require('./config');
+const { TOKEN, LOGCHANNEL } = require('./config');
 const { readdirSync } = require("fs");
 
 const client = new Client();
@@ -42,4 +42,4 @@ loadEvents();
 
 client.login(process.env.TOKEN)
 
-
+console.log(`${LOGCHANNEL}`)
