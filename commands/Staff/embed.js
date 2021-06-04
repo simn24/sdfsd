@@ -1,23 +1,23 @@
-module.exports.run = (client, message, args) => {
 const { MessageEmbed } = require("discord.js");
-const { LOGCHANNEL } = require('../../config')
+module.exports.run = (client, message, args) => {
+  
+  const embed = new MessageEmbed() 
+  .setColor("#606060")
+  .setTitle(`Bonjour, ce channel va servir a annoncer les mises a jour du bot ! `)
+  .setAuthor("simn24 | Bot")
+  .setFooter("simn24 | Bot, pour vous servir")
+  .setTimestamp()
+  message.channel.send(embed);
 
-  const embed = new MessageEmbed()
-    .setAuthor("TEST")
-    .setColor("#35f092") 
-    .setDescription(`test `)
-    .setTimestamp()
 
-message.channel.send(embed)
-client.channels.cache.get(`${LOGCHANNEL}`).send(embed)
 }
    
 
 
     module.exports.help = {
-      name: 'send', // Défini le nom de la commande
+      name: 'embed', // Défini le nom de la commande
       aliases: ['pings'], // Défini ces alias [Plus tard pour le s!help]
-      category: 'Misc', // Défini sa catégorie [Plus tard pour le s!help]
+      category: 'Staff', // Défini sa catégorie [Plus tard pour le s!help]
       description: 'Repondre pong quand on envoie ping', // Défini sa description [Plus tard pour le s!help]
       cooldown: 5, // Défini le cooldown de la commande (en secondes)
       usage: '', // Utilisation de la commande {Exemple : si la commandes est s!ban <@pseudo> mettre : <@pseudo>}
