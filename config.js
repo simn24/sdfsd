@@ -1,7 +1,7 @@
 exports.TOKEN = ''
 exports.PREFIX= 's!'
-exports.SERVEUR= 'Partie Communiste Neopolis !'
+exports.SERVEUR= '[BK] bucks'
 
 
 // Channel des join message \\
-exports.LOGCHANNEL= '<850327565797556244>'
+exports.LOGCHANNEL= '<>'
