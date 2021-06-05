@@ -6,19 +6,13 @@ module.exports.run = async (client, message, args) => {
   message.guild.members.unban(user)
 
 
-
-
-
-
-
-
-  const banLogEmbed = new MessageEmbed()
+  const UnbanLogEmbed = new MessageEmbed()
     .setAuthor(`${user.user.username} (${user.user.id})`, user.user.avatarURL)
     .setColor("#dc143c")
     .setDescription(`**Action** : UnBan`)
     .setTimestamp()
     .setFooter(message.author.username, message.author.avatarURL());
-  message.channel.send(banLogEmbed);
+  message.channel.send(UnbanLogEmbed);
 };
 
 module.exports.help = {
