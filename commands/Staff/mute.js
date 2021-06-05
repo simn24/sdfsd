@@ -32,7 +32,7 @@ module.exports.run = async (client, message, args) => {
   const muteLogEmbed = new MessageEmbed()
   .setAuthor(`${user.user.username} (${user.user.id})`)
   .setColor("#dc143c")
-  .setDescription(`**Action** : mute\n**Temps** : ${reason}`)
+  .setDescription(`**Action** : mute\n**Temps** : ${ms(ms(muteTime))}`)
   .setThumbnail(user.user.avatarURL())
   .setTimestamp()
   .setFooter(message.author.username, message.author.avatarURL());
