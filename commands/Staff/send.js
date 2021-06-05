@@ -6,7 +6,7 @@ const { LOGCHANNEL } = require('../../config')
     .setAuthor("Patch 2.2.0")
     .setColor("#35f092") 
     .setDescription(`Ajout de la commande s!help.`)
-    .setFooter('Cette commande sert a avoir la liste de toutes les commandes.')
+    .setFooter('Simn Bot | la pour vous servir!')
     .setTimestamp()
 message.delete();
 message.channel.send(embed)
