@@ -3,6 +3,7 @@ const { TOKEN } = require('./config');
 const { readdirSync } = require("fs");
 
 const client = new Client();
+require('discord-buttons')(client)
 ["commands", "cooldowns"].forEach(x => client[x] = new Collection());
 
 // =============================================================== \\
