@@ -3,9 +3,9 @@ const { MessageEmbed } = require("discord.js");
 const { LOGCHANNEL } = require('../../config')
 
   const embed = new MessageEmbed()
-    .setAuthor("Bonjour j'annonce que je suis beau whala")
+    .setAuthor("Patch 2.0.1")
     .setColor("#35f092") 
-    .setDescription(`test `)
+    .setDescription(`Rajoue d'un embed au mute/unmute (commande administrateur) `)
     .setTimestamp()
 
 message.channel.send(embed)
