@@ -40,6 +40,6 @@ loadEvents();
 
 // =============================================================== \\
 
-client.login(process.env.TOKEN);
+client.login('ODM0NzE5NjA4OTExOTUzOTYw.YIE_Nw.NumHHQcN6NNplclmFuhyUA12brQ');
 
 

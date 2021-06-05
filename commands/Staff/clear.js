@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
   name: "clear", // Défini le nom de la commande
-  aliases: ["clear", "purge"], // Défini ces alias [Plus tard pour le s!help]
+  aliases: ["clear"], // Défini ces alias [Plus tard pour le s!help]
   category: "Moderation", // Défini sa catégorie [Plus tard pour le s!help]
   description: "supprime un certain nombre de message", // Défini sa description [Plus tard pour le s!help]
   cooldown: 0, // Défini le cooldown de la commande (en secondes)

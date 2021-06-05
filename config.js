@@ -1,5 +1,6 @@
 exports.TOKEN = ''
 exports.PREFIX = 's!'
+exports.SERVEUR = 'BK Bucks'
 
 
 // Channel des join message \\
