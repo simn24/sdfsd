@@ -9,7 +9,6 @@ const { LOGCHANNEL } = require('../../config')
     .setTimestamp()
 
 message.channel.send(embed)
-client.channels.cache.get(`${LOGCHANNEL}`).send(embed)
 }
   
 
