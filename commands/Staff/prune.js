@@ -23,13 +23,13 @@ module.exports.run = async (client, message, args) => {
   else await message.channel.bulkDelete(messages);
   message.delete();
 
-  const PurgeEmbed = new MessageEmbed()
+  const PruneEmbed = new MessageEmbed()
     .setAuthor(message.author.username, message.author.avatarURL())
     .setColor("#dc143c")
     .setDescription(
-      `**Action** : Clear\n**Nombre message** : ${args[0]}\n**Salon**: ${message.channel}`
+      `**Action** : prune\n**Nombre message** : ${args[1]}\n**Utilisateur**: ${args[0]}`
     );
-  message.channel.send(PurgeEmbed);
+  message.channel.send(PruneEmbed);
 };
 
 module.exports.help = {
