@@ -3,9 +3,9 @@ const { MessageEmbed } = require("discord.js");
 const { LOGCHANNEL } = require('../../config')
 
   const embed = new MessageEmbed()
-    .setAuthor("Patch 2.0.1")
+    .setAuthor("Patch 2.1.0")
     .setColor("#35f092") 
-    .setDescription(`Rajoue d'un embed au mute/unmute (commande administrateur) `)
+    .setDescription(`Ajout des commandes staff : unban, prune,kill + correctif du purge`)
     .setTimestamp()
 
 message.channel.send(embed)
