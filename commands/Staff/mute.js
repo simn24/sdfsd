@@ -28,6 +28,16 @@ module.exports.run = async (client, message, args) => {
   setTimeout(() => {
     user.roles.remove(muteRole.id);
   }, ms(muteTime));
+
+  const muteLogEmbed = new MessageEmbed()
+  .setAuthor(`${user.user.username} (${user.user.id})`)
+  .setColor("#dc143c")
+  .setDescription(`**Action** : mute\n**Temps** : ${reason}`)
+  .setThumbnail(user.user.avatarURL())
+  .setTimestamp()
+  .setFooter(message.author.username, message.author.avatarURL());
+message.channel.send(muteLogEmbed)
+
 };
 
 module.exports.help = {
