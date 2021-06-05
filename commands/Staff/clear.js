@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
     limit: Math.min(args[0], 100),
     before: message.id,
   });
-
+  message.delete();
   await message.channel.bulkDelete(messages);
 
   const PurgeEmbed = new MessageEmbed()
