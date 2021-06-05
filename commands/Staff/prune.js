@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports.run = async (client, message, args) => {
   let user = message.guild.member(message.mention.users.first());
 
-  if (isNaN(args[0]) || args[0] < 1 || args[0] > 100)
+  if (isNaN(args[1]) || args[1] < 1 || args[1] > 100)
     return message.reply("Il faut spécifier un nombre entre 1 et 100!");
 
   const messages = (
