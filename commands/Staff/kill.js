@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-  process.exit();
+  client.destroy();
 
 };
 
