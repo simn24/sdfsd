@@ -7,7 +7,7 @@ const { LOGCHANNEL } = require('../../config')
     .setColor("#35f092") 
     .setDescription(`Ajout des commandes staff : unban, prune,kill + correctif du purge`)
     .setTimestamp()
-
+message.delete();
 message.channel.send(embed)
 }
   
