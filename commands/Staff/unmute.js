@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 
 
   const unmuteLogEmbed = new MessageEmbed()
-  .setAuthor(`${user.user.username} (${user.user.id})`)
+  .setAuthor(`${user.user.username} (${user.user.id})`, user.user.avatarURL())
   .setColor("#dc143c")
   .setDescription(`**Action** : unmute`)
   .setThumbnail(user.user.avatarURL())
