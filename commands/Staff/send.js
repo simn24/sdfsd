@@ -3,9 +3,10 @@ const { MessageEmbed } = require("discord.js");
 const { LOGCHANNEL } = require('../../config')
 
   const embed = new MessageEmbed()
-    .setAuthor("Patch 2.1.0")
+    .setAuthor("Patch 2.2.0")
     .setColor("#35f092") 
-    .setDescription(`Ajout des commandes staff : unban, prune,kill + correctif du purge`)
+    .setDescription(`Ajout de la commande s!help.`)
+    .setFooter('Cette commande sert a avoir la liste de toutes les commandes.')
     .setTimestamp()
 message.delete();
 message.channel.send(embed)
