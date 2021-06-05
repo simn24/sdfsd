@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
   name: "kick",
   aliases: ["expel", "expulser"],
-  category: "Moderation",
+  category: "Staff",
   description: "Kick un utilisateur",
   cooldown: 5,
   usage: "<@​​utilisateur> <raison>",

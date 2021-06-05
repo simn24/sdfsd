@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
   name: "kill",
   aliases: ["kill"],
-  category: "Moderation",
+  category: "Staff",
   description: "kill le bot",
   cooldown: 5,
   usage: "",

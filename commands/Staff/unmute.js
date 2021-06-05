@@ -25,7 +25,7 @@ message.channel.send(unmuteLogEmbed)
 module.exports.help = {
   name: "unmute",
   aliases: ["unmute"],
-  category: "Moderation",
+  category: "Staff",
   description: "unMute un utilisateur",
   cooldown: 5,
   usage: "<@​​utilisateur>",

@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) => {
 module.exports.help = {
   name: "unban", // Défini le nom de la commande
   aliases: ["unban", ""], // Défini ces alias [Plus tard pour le s!help]
-  category: "Moderation", // Défini sa catégorie [Plus tard pour le s!help]
+  category: "Staff", // Défini sa catégorie [Plus tard pour le s!help]
   description: "unBan un user", // Défini sa description [Plus tard pour le s!help]
   cooldown: 0, // Défini le cooldown de la commande (en secondes)
   usage: "<user_id>", // Utilisation de la commande {Exemple : si la commandes est s!ban <@pseudo> mettre : <@pseudo>}

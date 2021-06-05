@@ -43,7 +43,7 @@ message.channel.send(muteLogEmbed)
 module.exports.help = {
   name: "mute",
   aliases: ["mute"],
-  category: "Moderation",
+  category: "Staff",
   description: "Mute un utilisateur",
   cooldown: 5,
   usage: "<@​​utilisateur> <time>",
