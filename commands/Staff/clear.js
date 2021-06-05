@@ -1,32 +1,31 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+module.exports.run = async (client, message, args) => {
+  if (isNaN(args[0]) || (args[0] < 1 || args[0] > 100)) return message.reply('Il faut spécifier un nombre entre 1 et 100!')
 
-module.exports.run = async (bot, message, args) => {
-  if (args[0] == "help") {
-    let helpembxd = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .addField("Purge Command", "Usage: `*clear` <amount>");
-
-    message.channel.send(helpembxd);
-    return;
-  }
-
-  message.delete();
-
-  if (!message.member.hasPermission("MANAGE_MESSAGES"))
-    return message.reply("You don't have premssions to do that!");
-  if (!args[0])
-    return message.channel.send(
-      "Please enter a number of messages to clear! `Usage: .clear <amount>`"
-    );
-  const deleteNum = parseInt(args[0])
-  if (isNaN(deleteNum)) return message.reply('that is not a number')
-  message.channel.bulkDelete(deleteNum).then(() => {
-    message.channel
-      .send(`**__Cleared ${args[0]} messages.__**`)
-      .then(msg => msg.delete(2000));
+  const messages = await message.channel.messages.fetch({
+    limit: Math.min(args[0], 100),
+    before: message.id,
   });
+
+  await message.channel.bulkDelete(messages);
+
+  const PurgeEmbed = new MessageEmbed()
+    .setAuthor(message.author.username, message.author.avatarURL())
+    .setColor("#dc143c")
+    .setDescription(
+      `**Action** : Clear\n**Nombre message** : ${args[0]}\n**Salon**: ${message.channel}`
+    );
+  message.channel.send(PurgeEmbed);
 };
 
 module.exports.help = {
-  name: "clear"
+  name: "clear", // Défini le nom de la commande
+  aliases: ["clear", "purge"], // Défini ces alias [Plus tard pour le s!help]
+  category: "Moderation", // Défini sa catégorie [Plus tard pour le s!help]
+  description: "supprime un certain nombre de message", // Défini sa description [Plus tard pour le s!help]
+  cooldown: 0, // Défini le cooldown de la commande (en secondes)
+  usage: "<nbr_messages>", // Utilisation de la commande {Exemple : si la commandes est s!ban <@pseudo> mettre : <@pseudo>}
+  isUserAdmin: false, // Vérifie si l'utilisateur visé a les permissions
+  permissions: true, // Vérifie si l'utilisateur a besoin des permissions pour utiliser la commande
+  args: true, // Vérifie si la commande a besoin d'arguments
 };
