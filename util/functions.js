@@ -9,4 +9,12 @@ module.exports = async (client) => {
       .save()
       .then((g) => console.log(`Nouveau serveur -> "${g.guildName}`));
   };
+  client.getGuild = async guild => {
+    const data = await Guild.findOne({ guildID: guild.id });
+    if (data) return data;
+    return client.config.DEFAULTSETTINGS;
+
+  }
+
+
 };
