@@ -6,8 +6,9 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
+  message.channel.send(YoutubeMessage)
 }
-message.channel.send(YoutubeMessage)
+
   module.exports.help = {
     name: 'reseau', // Défini le nom de la commande
     aliases: ['reseaus'], // Défini ces alias [Plus tard pour le s!help]
