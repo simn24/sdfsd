@@ -47,7 +47,7 @@ if (!message.content.startsWith(PREFIX) || message.author.bot) return;
   tStamps.set(message.author.id, timeNow);
   setTimeout(() => tStamps.delete(message.author.id), cdAmount);
 
-  command.run(client, message, args, client.commands, settings);
+  command.run(client, message, args, settings, client.commands);
   
 }
 
