@@ -1,7 +1,11 @@
-exports.TOKEN = ''
-exports.PREFIX = 's!'
-exports.SERVEUR = 'BK Bucks'
-exports.DBCONNECTION = "mongodb://localhost:27017/localhost";
 
-// Channel des join message \\
-exports.LOGCHANNEL = '828945726099685384' , '784443819634065429'
+module.exports = {
+  PREFIX = 's!',
+  SERVEUR = 'BK Bucks',
+  DBCONNECTION = "mongodb+srv://simon:12345sim@cluster0.resct.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  DEFAULTSETTINGS: {
+    prefix:"s!",
+    logChannel: "logs",
+    welcomeMessage: "Welcome {{user}}",
+  }
+}
