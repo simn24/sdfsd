@@ -14,9 +14,12 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
-message.channel.send("Voici mes réseaux sociaux : ",YoutubeMessage)
+  const twitchMessage = new MessageButton()
+  .setLabel(`Twitch`)
+  .setStyle("url")
+  .setURL(`https://www.twitch.tv/simn24`);
+message.channel.send("Voici mes réseaux sociaux : ",YoutubeMessage , twitchMessage)
 }
-
   module.exports.help = {
     name: 'reseau', // Défini le nom de la commande
     aliases: ['reseaus'], // Défini ces alias [Plus tard pour le s!help]
