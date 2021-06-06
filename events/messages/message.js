@@ -1,10 +1,10 @@
 const { Collection, MessageEmbed } = require('discord.js');
 const { PREFIX } = require('../../config');
 
-module.exports = (client, message) => {
+module.exports = async (client, message) => {
+if (!message.content.startsWith(PREFIX) || message.author.bot) return;
 
-  if (!message.content.startsWith(PREFIX) || message.author.bot) return;
-
+  const settings = await client.getGuild(message.guild);
   const args = message.content.slice(PREFIX.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
@@ -47,7 +47,7 @@ module.exports = (client, message) => {
   tStamps.set(message.author.id, timeNow);
   setTimeout(() => tStamps.delete(message.author.id), cdAmount);
 
-  command.run(client, message, args, client.commands);
+  command.run(client, message, args, client.commands, settings);
   
 }
 
