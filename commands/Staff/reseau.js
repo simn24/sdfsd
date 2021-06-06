@@ -18,7 +18,7 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Twitch`)
   .setStyle("url")
   .setURL(`https://www.twitch.tv/simn24`);
-message.channel.send("Voici mes réseaux sociaux : ",YoutubeMessage , twitchMessage)
+message.channel.send({embed : embed,button : YoutubeMessage ,button2 : twitchMessage})
 }
   module.exports.help = {
     name: 'reseau', // Défini le nom de la commande
