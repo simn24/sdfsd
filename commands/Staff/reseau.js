@@ -1,5 +1,5 @@
 
-const { MessageButton, MessageActionRow } = require('discord-buttons');
+const { MessageButton, MessageActionRow, MessageEmbed } = require('discord-buttons');
 module.exports.run = (client, message, args) => {
 
   const embed = new MessageEmbed()
