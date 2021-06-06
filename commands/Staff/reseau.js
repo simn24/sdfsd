@@ -14,11 +14,13 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
+  console.log(YoutubeMessage)
   const twitchMessage = new MessageButton()
   .setLabel(`Twitch`)
   .setStyle("url")
   .setURL(`https://www.twitch.tv/simn24`);
   message.channel.send({buttons: [YoutubeMessage, twitchMessage], embed: embed})
+console.log(twitchMessage)
 }
   module.exports.help = {
     name: 'reseau', // Défini le nom de la commande
