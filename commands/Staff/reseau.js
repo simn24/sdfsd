@@ -2,11 +2,18 @@
 const { MessageButton, MessageActionRow } = require('discord-buttons');
 module.exports.run = (client, message, args) => {
 
+  const embed = new MessageEmbed()
+    .setAuthor("Mes réseaux sociaux ")
+    .setColor("#35f092") 
+    .setDescription(`Cliquer sur les boutons si dessous pour s'y rendre!`)
+    .setFooter('Simn Bot | la pour vous servir!')
+    .setTimestamp()
+
   const YoutubeMessage = new MessageButton()
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
-  message.channel.send(YoutubeMessage)
+  message.channel.send(embed,YoutubeMessage)
 }
 
   module.exports.help = {
