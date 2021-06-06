@@ -3,6 +3,7 @@ const { TOKEN } = require('./config');
 const { readdirSync } = require("fs");
 
 const client = new Client();
+client.mongoose = require("./util/mongoose");
 ["commands", "cooldowns"].forEach(x => client[x] = new Collection());
 require('discord-buttons')(client)
 // =============================================================== \\
@@ -37,7 +38,7 @@ const loadEvents = (dir = "./events/") => {
 };
 
 loadEvents();
-
+client.mongoose.init();
 // =============================================================== \\
 
 client.login(process.env.TOKEN);
