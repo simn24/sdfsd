@@ -14,7 +14,7 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
-  message.channel.send({button: YoutubeMessage, embed: embed})
+message.channel.send("Voici mes réseaux sociaux : ",embed)
 }
 
   module.exports.help = {
