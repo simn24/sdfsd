@@ -1,5 +1,5 @@
 module.exports.run = async (client, message, args, settings) => {
-  message.channel.send(`Prefix actuel: \`${settings.prefix}\``)
+  console.log(`${settings.prefix}`)
 };
 
 module.exports.help = {
