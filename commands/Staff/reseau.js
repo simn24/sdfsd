@@ -2,7 +2,7 @@
 const { MessageButton, MessageActionRow } = require('discord-buttons');
 module.exports.run = (client, message, args) => {
 
-  const buttonJumpToMessage = new MessageButton()
+  const YoutubeMessage = new MessageButton()
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
