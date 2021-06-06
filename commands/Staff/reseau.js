@@ -14,7 +14,7 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Youtube`)
   .setStyle("url")
   .setURL(`https://www.youtube.com/channel/UCAqU2PqCOvXHkzOvYvSYWzA`);
-  message.channel.send(embed,YoutubeMessage)
+  message.channel.send({button: YoutubeMessage, embed: embed})
 }
 
   module.exports.help = {
