@@ -16,6 +16,7 @@ module.exports.run = async (client, message, args) => {
       `**Action** : Clear\n**Nombre message** : ${args[0]}\n**Salon**: ${message.channel}`
     );
   message.channel.send(PurgeEmbed);
+  client.channels.cache.get(`${LOGCHANNEL}`).send(PurgeEmbed)
 };
 
 module.exports.help = {
