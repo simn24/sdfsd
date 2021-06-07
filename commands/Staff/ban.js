@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
         .setTimestamp()
         .setFooter(message.author.username, message.author.avatarURL());
       message.channel.send(banLogEmbed)
-      client.channels.cache.get(`${LOGCHANNEL}`).send(banLogEmbed)
+      client.channels.cache.get(`${settings.logChannel}`).send(banLogEmbed)
 }
     
 module.exports.help = {
