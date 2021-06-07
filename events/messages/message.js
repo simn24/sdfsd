@@ -1,11 +1,11 @@
 const { Collection, MessageEmbed } = require('discord.js');
-const { PREFIX } = require('../../config');
+
 
 module.exports = async (client, message) => {
-if (!message.content.startsWith(PREFIX) || message.author.bot) return;
+if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
 
   const settings = await client.getGuild(message.guild);
-  const args = message.content.slice(PREFIX.length).split(/ +/);
+  const args = message.content.slice(settings.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
@@ -15,7 +15,7 @@ if (!message.content.startsWith(PREFIX) || message.author.bot) return;
 
   if (command.help.args && !args.length) {
     let noArgsReply = `Argument manquant !`;
-    if (command.help.usage) noArgsReply += `\n\n**Utilisation de cette commande :**\n \`${PREFIX}${command.help.name} ${command.help.usage}\``
+    if (command.help.usage) noArgsReply += `\n\n**Utilisation de cette commande :**\n \`${settings.prefix}${command.help.name} ${command.help.usage}\``
 
     return message.reply(`${noArgsReply}`)
   }
