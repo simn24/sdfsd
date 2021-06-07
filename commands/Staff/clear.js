@@ -1,5 +1,5 @@
 const { MessageEmbed } = require("discord.js");
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, args, settings) => {
   if (isNaN(args[0]) || (args[0] < 1 || args[0] > 100)) return message.reply('Il faut spécifier un nombre entre 1 et 100!')
 
   const messages = await message.channel.messages.fetch({
@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
       `**Action** : Clear\n**Nombre message** : ${args[0]}\n**Salon**: ${message.channel}`
     );
   message.channel.send(PurgeEmbed);
-  client.channels.cache.get(`${LOGCHANNEL}`).send(PurgeEmbed)
+  client.channels.cache.get(`${settings.logChannel}`).send(PurgeEmbed)
 };
 
 module.exports.help = {
