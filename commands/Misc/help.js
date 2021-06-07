@@ -12,7 +12,7 @@ module.exports.run = (client, message, args, commands) => {
       categoryList.forEach(element => {
         embed.addField(
           `${element}`,
-          `\`${commands.filter(cat => cat.help.category === `${element}`).map(cmd => cmd.help.name).join(', ')}\``
+          `\`${client.commands.filter(cat => cat.help.category === `${element}`).map(cmd => cmd.help.name).join(', ')}\``
         );
       });
 
