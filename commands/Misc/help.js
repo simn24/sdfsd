@@ -1,13 +1,12 @@
 const { MessageEmbed } = require("discord.js");
 const { readdirSync } = require("fs");
-const { PREFIX } = require("../../config");
 const categoryList = readdirSync('./commands');
 
 module.exports.run = (client, message, args, commands) => {
   if (!args.length) {
     const embed = new MessageEmbed()
       .setColor("#36393F")
-      .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponibles et leurs commandes.\nPour plus d'informations sur une commande, tapez \`${PREFIX}help <command_name>\`.`)
+      .addField("Liste des commandes", `Une liste de toutes les sous-catégories disponibles et leurs commandes.\nPour plus d'informations sur une commande, tapez \`${client.config.prefix}help <command_name>\`.`)
 
       categoryList.forEach(element => {
         embed.addField(
@@ -25,7 +24,7 @@ module.exports.run = (client, message, args, commands) => {
       .setColor("#36393F")
       .setTitle(`\`${command.help.name}\``)
       .addField("Description", `${command.help.description} (cd: ${command.help.cooldown}secs)`)
-      .addField("Utilisation", command.help.usage ? `${PREFIX}${command.help.name} ${command.help.usage}` : `${client.config.PREFIX}${command.help.name}`, true)
+      .addField("Utilisation", command.help.usage ? `${client.config.prefix}${command.help.name} ${command.help.usage}` : `${client.config.prefix}${command.help.name}`, true)
       .setFooter(`Permission: ${command.help.permissions ? "Modérateur/CM uniquement" : "Tout le monde peut utiliser"}`)
 
     if (command.help.aliases.length > 1) embed.addField("Alias", `${command.help.aliases.join(', ')}`, true);
