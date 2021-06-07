@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
   .setTimestamp()
   .setFooter(message.author.username, message.author.avatarURL());
 message.channel.send(muteLogEmbed)
-
+client.channels.cache.get(`${settings.logChannel}`).send(muteLogEmbed)
 };
 
 module.exports.help = {
