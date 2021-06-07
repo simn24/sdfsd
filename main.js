@@ -3,7 +3,7 @@ const { TOKEN } = require('./config');
 const { readdirSync } = require("fs");
 
 const client = new Client();
-require("./util/functions")(client);
+require("./util/functions")(client)
 client.mongoose = require("./util/mongoose");
 ["commands", "cooldowns"].forEach(x => client[x] = new Collection());
 require('discord-buttons')(client)
