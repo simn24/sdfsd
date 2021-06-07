@@ -2,9 +2,10 @@ const { Collection, MessageEmbed } = require('discord.js');
 
 
 module.exports = async (client, message) => {
+const settings = await client.getGuild(message.guild);
 if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
 
-  const settings = await client.getGuild(message.guild);
+  
   const args = message.content.slice(settings.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
