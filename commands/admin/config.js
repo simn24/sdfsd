@@ -1,5 +1,9 @@
 module.exports.run = async (client, message, args, settings) => {
-  console.log(`${settings.prefix}`)
+  const getSetting = args[0];
+  const newSetting = args.slice(1).join(" ");
+  return message.reply("merci de mettre une clé qui existe (prefix, logChannel, welcomeMessage)");
+
+  
 };
 
 module.exports.help = {
@@ -11,5 +15,5 @@ module.exports.help = {
   usage: "<key> <value>", // Utilisation de la commande {Exemple : si la commandes est s!ban <@pseudo> mettre : <@pseudo>}
   isUserAdmin: false, // Vérifie si l'utilisateur a visé a les permissions
   permissions: true, // Vérifie si l'utilisateur a besoin des permissions pour utiliser la commande
-  args: false, // Vérifie si la commande a besoin d'arguments
+  args: true, // Vérifie si la commande a besoin d'arguments
 };
