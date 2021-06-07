@@ -1,7 +1,7 @@
 module.exports.run = async (client, message, args, settings) => {
   const getSetting = args[0];
   const newSetting = args.slice(1).join(" ");
-  if (getSetting != "prefix" || getSetting != "logChannel" || getSetting != "welcomeMessage") return message.reply("Merci de mettre une clé qui existe ! ");
+  
   
   switch(getSetting) {
     case "prefix": {
