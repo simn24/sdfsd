@@ -3,9 +3,24 @@ const { Collection, MessageEmbed } = require('discord.js');
 
 module.exports = async (client, message) => {
 const settings = await client.getGuild(message.guild);
-if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
+const dbUser = await client.getUser(message.member);
+if (message.author.bot) return;
 
-  
+if (!dbUser) await client.createUser({
+  guildID: message.member.guild.id,
+  guildName: message.member.guild.name,
+  userID: message.member.id,
+  username: message.member.user.tag,
+})
+
+
+
+
+
+
+
+if (!message.content.startsWith(settings.prefix));
+
   const args = message.content.slice(settings.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
 
@@ -48,7 +63,7 @@ if (!message.content.startsWith(settings.prefix) || message.author.bot) return;
   tStamps.set(message.author.id, timeNow);
   setTimeout(() => tStamps.delete(message.author.id), cdAmount);
 
-  command.run(client, message, args, settings, client.commands);
+  command.run(client, message, args, settings, client.commands, dbUser);
   
 }
 
