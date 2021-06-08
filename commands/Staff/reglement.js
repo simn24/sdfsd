@@ -1,7 +1,7 @@
 
 const { MessageButton, MessageActionRow } = require('discord-buttons');
 module.exports.run = (client, message, args) => {
-
+  if (message.author.id !== "786623158568353813") return message.reply('Cette commande est réservé au fondateur du bot merci de prendre contact avec lui pour y avoir accès ! ')
   const ReglementButton = new MessageButton()
   .setLabel(`Accepter le réglement`)
   .setStyle("green")

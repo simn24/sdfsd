@@ -1,7 +1,7 @@
 module.exports.run = (client, message, args) => {
 const { MessageEmbed } = require("discord.js");
 const { LOGCHANNEL } = require('../../config')
-
+if (message.author.id !== "786623158568353813") return message.reply('Cette commande est réservé au fondateur du bot merci de prendre contact avec lui pour y avoir accès ! ')
   const embed = new MessageEmbed()
     .setAuthor("Patch 2.2.0")
     .setColor("#35f092") 

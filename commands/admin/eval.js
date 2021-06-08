@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     return text;
   }
 
-  if (message.author.id !== "786623158568353813") return;
+  if (message.author.id !== "786623158568353813") return message.reply('Cette commande est réservé au fondateur du bot merci de prendre contact avec lui pour y avoir accès ! ')
   const code = args.join(" ");
   const evaled = eval(code);
   const cleanCode = await clean(evaled);
