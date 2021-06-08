@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
-
+  await message.channel.send('Arret du bot ! ')
   client.destroy();
 
 };
