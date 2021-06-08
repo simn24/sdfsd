@@ -4,8 +4,8 @@ module.exports.run = (client, message, args, settings, dbUser) => {
   }
   
   module.exports.help = {
-    name: 'uexp', // Défini le nom de la commande
-    aliases: ['uxp'], // Défini ces alias [Plus tard pour le s!help]
+    name: 'exp', // Défini le nom de la commande
+    aliases: ['xp'], // Défini ces alias [Plus tard pour le s!help]
     category: 'experience', // Défini sa catégorie [Plus tard pour le s!help]
     description: 'renvoie l\'expérience de l\'utilisateur', // Défini sa description [Plus tard pour le s!help]
     cooldown: 5, // Défini le cooldown de la commande (en secondes)
