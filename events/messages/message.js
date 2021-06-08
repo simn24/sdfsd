@@ -11,7 +11,15 @@ if (!dbUser) await client.createUser({
   guildName: message.member.guild.name,
   userID: message.member.id,
   username: message.member.user.tag,
-})
+});
+
+const expCd = Math.floor(Math.random() * 19) + 1;
+const expToAdd = Math.floor(Math.random() * 25) + 10;
+
+if (expCd >= 8 && expCd <= 11) message.channel.send(`TEST vous etes entre 8 et 11 ! ${expCd} alors vous recevez ${expToAdd}!`)
+
+// await client.updateExp(client, message.member, expToAdd);
+
 
 
 
