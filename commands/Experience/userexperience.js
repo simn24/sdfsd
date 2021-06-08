@@ -1,5 +1,6 @@
 module.exports.run = (client, message, args, settings, dbUser) => {
   message.reply(`Vous avez ${dbUser.experience} EXP!`)
+  message.delete()
   }
   
   module.exports.help = {
