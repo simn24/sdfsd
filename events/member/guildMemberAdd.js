@@ -1,6 +1,6 @@
 const { TeamMember } = require("discord.js");
 const user = require("../../models/user");
-module.exports = (client, member) => {
+module.exports = async (client, member) => {
 const newUser = {
   guildID: member.guild.id,
   guildName: member.guild.name,
