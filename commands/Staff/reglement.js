@@ -6,7 +6,7 @@ module.exports.run = (client, message, args) => {
   .setLabel(`Accepter le réglement`)
   .setStyle("green")
   .setID(`acceptID`);
-  message.channel.send('Accepter le réglement qui n\'existe pas bande de salope', ReglementButton)
+  message.channel.send('cliquer sur le bouton pour obtenir le role membre!', ReglementButton)
   }
   
   module.exports.help = {
