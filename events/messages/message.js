@@ -22,11 +22,6 @@ if (expCd >= 8 && expCd <= 11) message.channel.send(`TEST vous etes entre 8 et 1
 
 
 
-
-
-
-
-
 if (!message.content.startsWith(settings.prefix));
 
   const args = message.content.slice(settings.prefix.length).split(/ +/);
