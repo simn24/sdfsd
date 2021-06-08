@@ -31,7 +31,7 @@ module.exports = (client) => {
       .save()
       .then(u => console.log(`Nouvel utilisateur -> "${u.username}`));
   };
-  client.getGuild = async user => {
+  client.getUser = async user => {
     const data = await User.findOne({ userID: user.id });
     if (data) return data;
     else return;
