@@ -1,6 +1,6 @@
 const { TeamMember } = require("discord.js");
 const user = require("../../models/user");
-
+module.exports = (client, member) => {
 const newUser = {
   guildID: member.guild.id,
   guildName: member.guild.name,
@@ -9,3 +9,4 @@ const newUser = {
 };
 
 await client.createUser(newGuild);
+}
