@@ -8,5 +8,5 @@ const newUser = {
   username: member.user.tag,
 };
 
-await client.createUser(newGuild);
+await client.createUser(newUser);
 }
