@@ -1,5 +1,5 @@
 module.exports.run = (client, message, args, settings, dbUser) => {
-  message.reply(`Vous avez ${dbUser.updatedExp} EXP!`)
+  message.reply(`Vous avez ${dbUser.experience} EXP!`)
   message.delete()
   }
   
