@@ -1,6 +1,6 @@
 const { Collection, MessageEmbed } = require('discord.js');
 module.exports = async (client, message) => {
-  
+
 const settings = await client.getGuild(message.guild);
 const dbUser = await client.getUser(message.member);
 if (message.author.bot) return;
@@ -19,7 +19,7 @@ if (expCd >= 8 && expCd <= 11) message.channel.send(`TEST vous etes entre 8 et 1
 
 // await client.updateExp(client, message.member, expToAdd);
 
-if (!message.content.startsWith(settings.prefix));
+if (!message.content.startsWith(settings.prefix)) return;
 
   const args = message.content.slice(settings.prefix.length).split(/ +/);
   const commandName = args.shift().toLowerCase();
