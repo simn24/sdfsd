@@ -6,7 +6,7 @@ module.exports.run = (client, message, args, settings, dbUser) => {
   module.exports.help = {
     name: 'exp', // Défini le nom de la commande
     aliases: ['xp'], // Défini ces alias [Plus tard pour le s!help]
-    category: 'experience', // Défini sa catégorie [Plus tard pour le s!help]
+    category: 'level', // Défini sa catégorie [Plus tard pour le s!help]
     description: 'renvoie l\'expérience de l\'utilisateur', // Défini sa description [Plus tard pour le s!help]
     cooldown: 5, // Défini le cooldown de la commande (en secondes)
     usage: '', // Utilisation de la commande {Exemple : si la commandes est s!ban <@pseudo> mettre : <@pseudo>}
