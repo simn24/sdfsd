@@ -5,17 +5,6 @@ const settings = await client.getGuild(message.guild);
 const dbUser = await client.getUser(message.member);
 if (message.author.bot) return;
 
-if (!dbUser) await client.createUser({
-  guildID: message.member.guild.id,
-  guildName: message.member.guild.name,
-  userID: message.member.id,
-  username: message.member.user.tag,
-});
-
-const expCd = Math.floor(Math.random() * 19) + 1;
-const expToAdd = Math.floor(Math.random() * 25) + 10;
-
-if (expCd >= 8 && expCd <= 11) await client.addExp(client, message.member, expToAdd);
 
 if (!message.content.startsWith(settings.prefix)) return;
 
@@ -61,7 +50,7 @@ if (!message.content.startsWith(settings.prefix)) return;
   tStamps.set(message.author.id, timeNow);
   setTimeout(() => tStamps.delete(message.author.id), cdAmount);
 
-  command.run(client, message, args, settings, client.commands, dbUser);
+  command.run(client, message, args, settings, client.commands);
   
 }
 
